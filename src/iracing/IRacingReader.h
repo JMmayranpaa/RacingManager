@@ -5,30 +5,30 @@
 #ifndef RACINGMANAGER_IRACINGREADER_H
 #define RACINGMANAGER_IRACINGREADER_H
 #pragma once
+#include <windows.h>
+#include "irsdk_defines.h"
 #include "TelemetryData.h"
-#include "windows.h"
 
 
 
 class IRacingReader {
 public:
     IRacingReader();
-    ~IracingReader();
+    ~IRacingReader();
 
     bool tryConnect();
-    bool disconnect();
-    bool isConnected() const { return sharedMem != nullptr; };
+    void disconnect();
+    bool isConnected() const { return sharedMem != nullptr; }
 
     TelemetryData read();
+
 private:
-    HANDLE          hMapFile    = nullptr;
-    const char* sharedMem       = nullptr;
+    HANDLE      hMapFile  = nullptr;
+    const char* sharedMem = nullptr;
 
-    float getFloat(const char* name)    const;
-    int getInt(const char* name)        const;
-    double getDouble(const char* name)  const;
-
-
+    const irsdk_varHeader* findVar(const char* name) const;
+    float getFloat(const char* name) const;
+    int   getInt(const char* name)   const;
 };
 
 

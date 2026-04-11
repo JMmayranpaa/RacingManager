@@ -1,18 +1,28 @@
 #include <iostream>
-#include <QApplication>
-#include <overlay/OverlayWindow.h>
+#include <QCoreApplication>
+#include <QTimer>
+#include "iracing/IracingReader.h"
 
+#include "iracing/IRacingReader.h"
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
 int main(int argc, char *argv[]) {
-    QApplication app(argc, argv);
-    app.setQuitOnLastWindowClosed(false);
+    QCoreApplication app(argc, argv);
 
-    OverlayWindow overlay;
-    overlay.show();
+    IRacingReader reader;
+    QTimer timer;
 
+    QObject::connect(&timer, &QTimer::timeout, [&]() {
+       if (!reader.isConnected()) {
+           reader.tryConnect();
+           printf("Waiting for Iracing...\n");
+           return;
+       }
+        TelemetryData d = reader.read();
+        printf("Speed: %.1f km/h Fuel: %.2f l/min Gear: %d /6 Pos: %d\n", d.speedKmh, d.fuelLevel, d.gear, d.position);
+    });
+
+    timer.start(500);
     return app.exec();
-
 
 }

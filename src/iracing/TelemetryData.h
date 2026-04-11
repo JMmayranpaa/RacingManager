@@ -12,7 +12,7 @@ struct TelemetryData {
     float speedKmh              = 0.f;
     float throttle              = 0.f; // 0-1
     float brake                 = 0.f; // 0-1 // Perhaps integer
-    float gear                  = 0; // Perhaps integer
+    int gear                  = 0; // Perhaps integer
 
     // Laptimes
     float lastLapTime           = 0.f;
