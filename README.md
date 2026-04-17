@@ -9,16 +9,29 @@ applications which are used when driving IRacing.
 
 I have also implemented a simple delta-overlay, and position-speed-gear-fuel-overlay.
 
-![img_1.png](img_1.png)
+*Overlays are movable. These overlays are going to change to be more customizable. But for this demo, I just wanted to show concept.*
 
-![img_2.png](img_2.png)
+![Main UI with Overlays](img_1.png)
 
-![img_3.png](img_3.png)
- 
+*Checkbox for overlays which you want to show or hide.*
+
+![Overlay Selection Panel](img_2.png)
+
+*Application launcher, where you can add applications and launch them with one click when you open this application from desktop.*
+
+![Application Launcher Interface](img_3.png)
+
+*Short gif showing how overlays work. I have implemented a simple delta-overlay, and position-speed-gear-fuel-overlay. These are going to be more customizable in the future.*
+
 <img width="426" height="240" alt="overlay_demo" src="https://github.com/user-attachments/assets/499c29f6-652b-4fe6-84ba-6e119c044d20" />
 
-Stack:
-C++20
+## Stack
+C++20  
 Qt 6
 
-And of course I use LLM's to pair program/study. LLM's which are mainly used are Claude, and Github Copilot.
+## Getting Started
+1. Clone the repository.
+2. Build with CMake (see CMakeLists.txt for details).
+3. Run the executable from the build directory.
+
+For more details on setup or contributions, feel free to open an issue!
