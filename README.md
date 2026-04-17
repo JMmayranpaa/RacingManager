@@ -14,7 +14,8 @@ I have also implemented a simple delta-overlay, and position-speed-gear-fuel-ove
 
 ![img_3.png](img_3.png)
 
-![overlay_demo.gif](../../Downloads/overlay_demo.gif)
+<img width="426" height="240" alt="overlay_demo" src="https://github.com/user-attachments/assets/154cd21e-739c-4bb1-b55d-c93181ab921a" />
+
 
 Stack:
 C++20
