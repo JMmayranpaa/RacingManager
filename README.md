@@ -8,14 +8,14 @@ I have implemented a simple UI where user can select desired Overlays and make a
 applications which are used when driving IRacing.
 
 I have also implemented a simple delta-overlay, and position-speed-gear-fuel-overlay.
+
 ![img_1.png](img_1.png)
 
 ![img_2.png](img_2.png)
 
 ![img_3.png](img_3.png)
-
-<img width="426" height="240" alt="overlay_demo" src="https://github.com/user-attachments/assets/154cd21e-739c-4bb1-b55d-c93181ab921a" />
-
+ 
+<img width="426" height="240" alt="overlay_demo" src="https://github.com/user-attachments/assets/499c29f6-652b-4fe6-84ba-6e119c044d20" />
 
 Stack:
 C++20
