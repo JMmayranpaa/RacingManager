@@ -18,6 +18,16 @@ add_executable(RacingManager
         SDK/irsdk/irsdk_client.cpp
         SDK/irsdk/irsdk_utils.cpp
         SDK/irsdk/yaml_parser.cpp
+        src/ui/MainWindow.cpp
+        src/ui/MainWindow.h
+        src/ui/OverlayManager.cpp
+        src/ui/OverlayManager.h
+        src/core/AppLauncher.cpp
+        src/core/AppLauncher.h
+        src/ui/AppLauncherDialog.cpp
+        src/ui/AppLauncherDialog.h
+        src/overlay/DeltaOverlay.cpp
+        src/overlay/DeltaOverlay.h
 )
 
 target_link_libraries(RacingManager
